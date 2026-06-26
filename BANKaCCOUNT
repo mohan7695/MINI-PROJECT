@@ -1,0 +1,71 @@
+
+import java.util.*;
+public class BankAccount
+{
+    
+    int balance=10000;
+void deposit(int l) {
+	  
+		
+		  balance=balance+l;
+		
+			
+			System.out.println("Amount Deposited");
+		
+		
+	}
+	void Withdraw(int withdraw) {
+		if(withdraw<=balance) {
+			//continue;
+
+		 balance=balance-withdraw;
+			System.out.println(balance);
+			
+			System.out.println("Amount Withdraw.");
+		}
+		else{
+		    System.out.println("Insufficient Balance");
+		}
+		
+		
+	}
+
+		void checkBalance(){
+			//int d=balance;
+			System.out.println("Current Balance: "+balance);
+		}
+	
+	 public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Number:");
+int p=sc.nextInt();
+
+
+
+ BankAccount b=new BankAccount();
+if(p>0){
+    System.out.println("1.Deposit.");
+System.out.println("Enter Amount to Deposit:");
+int l=sc.nextInt();
+
+b.deposit(l);
+
+
+    System.out.println("2.Withdraw.");
+System.out.println("Enter Amount to Withdraw:");
+
+int withdraw=sc.nextInt();
+
+b.Withdraw(withdraw);
+
+
+    System.out.println("3.CurrentBalance");
+b.checkBalance();
+}	
+	else{
+	    System.out.println("Invalid Input");
+	}
+	 }
+
+}
+
